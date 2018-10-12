@@ -20,7 +20,8 @@ class App extends Component {
         })
     }
     render() {
-        return <Header headerText='hh'/>
+        debugger
+        return <Header headerText='专辑'/>
     }
 }
 
