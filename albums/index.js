@@ -11,17 +11,13 @@ import {Text,View, AppRegistry} from 'react-native';
 import Header from './src/compoment/Header';
 import AlbumList from './src/compoment/AlbumList';
 
-class App extends Component {
-    
-
-    render() {
+const App = () => {
         return (
             <View style={{flex:1}}>
                 <Header headerText='专辑'/>
                 <AlbumList />
             </View>
         )
-    }
 }
 
 AppRegistry.registerComponent('albums',() => App);

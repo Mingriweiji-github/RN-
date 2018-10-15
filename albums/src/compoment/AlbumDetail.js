@@ -1,10 +1,11 @@
 import React from 'react';
-import {Image,Text,View} from 'react-native';
+import {Image,Text,View,Linking} from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 const AlbumDetail = ({album}) => {
-    const {image,thumbnail,title,des} = album;
+    const {image,thumbnail,title,des,link} = album;
 
     const {
         imageStyle,
@@ -12,23 +13,28 @@ const AlbumDetail = ({album}) => {
         thumbnailStyle,
         titleStyle,
         infoStyle,
-        desStyle
+        desStyle,
+        buttonContainerStyle
     } = styles;
 
     return (
         <Card>
             <CardSection style={imageContainerStyle}> 
-                <Image resizeMode='cover' source={{url:image}} style={imageStyle}></Image>
+                <Image resizeMode='cover' source={{url:image}} style={imageStyle} />
             </CardSection>
 
             <CardSection>
-                <Image source={{url:thumbnail}} style={thumbnailStyle}></Image>
+                <Image source={{url:thumbnail}} style={thumbnailStyle} />
                 <View style={infoStyle}>
                     <Text style={titleStyle}>{title}</Text>
                     <Text style={desStyle}>{des}</Text>
                 </View>
             </CardSection>
-
+            <CardSection style= {buttonContainerStyle}>
+                <Button onPress={() => {
+                    Linking.openURL(link)
+                }}> 全部购买 </Button>
+            </CardSection>
 
         </Card>
     )
@@ -60,6 +66,11 @@ const styles = {
     },
     infoStyle: {
         flex:1,
+        marginBottom:6,
+    },
+    buttonContainerStyle: {
+        justifyContent:'center',
+        alignItems:'center',
     }
 }
 export default AlbumDetail;
