@@ -1,5 +1,5 @@
  import React from 'react';
- import {Text,View} from 'react-native';
+ import {Text,View,RCTView} from 'react-native';
 
  const Header = (props) => {
     const {textStyle,viewStyle} = styles;

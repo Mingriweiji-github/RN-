@@ -1635,6 +1635,8 @@ __d(function (global, _$$_REQUIRE, module, exports, _dependencyMap) {
 
   var _Header = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "./src/compoment/Header"));
 
+  var _AlbumList = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "./src/compoment/AlbumList"));
+
   var _jsxFileName = "/Volumes/Roc01/RN/albums/index.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -1684,27 +1686,25 @@ __d(function (global, _$$_REQUIRE, module, exports, _dependencyMap) {
     }
 
     _createClass(App, [{
-      key: "componentWillMount",
-      value: function componentWillMount() {
-        fetch('https://5bc05e9759c0e1001337f2a4.mockapi.io/api/list').then(function (res) {
-          return res.json();
-        }).then(function (responseJson) {
-          return console.log(responseJson);
-        }).catch(function (err) {
-          console.log(err);
-        });
-      }
-    }, {
       key: "render",
       value: function render() {
-        debugger;
-        return _react.default.createElement(_Header.default, {
+        return _react.default.createElement(_reactNative.View, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19
+          }
+        }, _react.default.createElement(_Header.default, {
           headerText: "\u4E13\u8F91",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 20
           }
-        });
+        }), _react.default.createElement(_AlbumList.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          }
+        }));
       }
     }]);
 
@@ -1718,7 +1718,7 @@ __d(function (global, _$$_REQUIRE, module, exports, _dependencyMap) {
   _reactNative.AppRegistry.registerComponent('albums', function () {
     return App;
   });
-},0,[1,11,165,507],"index.js");
+},0,[1,11,165,507,508],"index.js");
 __d(function (global, _$$_REQUIRE, module, exports, _dependencyMap) {
   'use strict';
 
@@ -79645,6 +79645,252 @@ __d(function (global, _$$_REQUIRE, module, exports, _dependencyMap) {
   var _default = Header;
   exports.default = _default;
 },507,[1,165],"src/compoment/Header.js");
+__d(function (global, _$$_REQUIRE, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
+
+  var _AlbumDetail = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "./AlbumDetail"));
+
+  var _jsxFileName = "/Volumes/Roc01/RN/albums/src/compoment/AlbumList.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } _setPrototypeOf(subClass.prototype, superClass && superClass.prototype); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+  function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+  function _getPrototypeOf(o) { _getPrototypeOf = Object.getPrototypeOf || function _getPrototypeOf(o) { return o.__proto__; }; return _getPrototypeOf(o); }
+
+  var _components = {
+    AlbumList: {
+      displayName: "AlbumList"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index.default)({
+    filename: "/Volumes/Roc01/RN/albums/src/compoment/AlbumList.js",
+    components: _components,
+    locals: [module],
+    imports: [_react.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var AlbumList = function (_React$Component) {
+    function AlbumList() {
+      var _getPrototypeOf2;
+
+      var _temp, _this;
+
+      _classCallCheck(this, AlbumList);
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(AlbumList)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
+        albums: []
+      }, _temp));
+    }
+
+    _createClass(AlbumList, [{
+      key: "componentWillMount",
+      value: function componentWillMount() {
+        var _this2 = this;
+
+        fetch('https://5bc05e9759c0e1001337f2a4.mockapi.io/api/list').then(function (res) {
+          return res.json();
+        }).then(function (responseJson) {
+          return _this2.setState({
+            albums: responseJson
+          });
+        }).catch(function (err) {
+          console.log(err);
+        });
+      }
+    }, {
+      key: "renderDetail",
+      value: function renderDetail() {
+        return this.state.albums.map(function (album) {
+          return _react.default.createElement(_AlbumDetail.default, {
+            key: album.title,
+            album: album,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 18
+            }
+          });
+        });
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        console.log(this.state.albums.map(function (album) {
+          return console.log(album);
+        }));
+        return _react.default.createElement(_reactNative.View, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          }
+        }, this.renderDetail());
+      }
+    }]);
+
+    _inherits(AlbumList, _React$Component);
+
+    return AlbumList;
+  }(_react.default.Component);
+
+  AlbumList = _wrapComponent("AlbumList")(AlbumList);
+  var _default2 = AlbumList;
+  exports.default = _default2;
+},508,[1,11,165,509],"src/compoment/AlbumList.js");
+__d(function (global, _$$_REQUIRE, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
+
+  var _Card = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "./Card"));
+
+  var _CardSection = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "./CardSection"));
+
+  var _jsxFileName = "/Volumes/Roc01/RN/albums/src/compoment/AlbumDetail.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var AlbumDetail = function AlbumDetail(props) {
+    return _react.default.createElement(_Card.default, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      }
+    }, _react.default.createElement(_CardSection.default, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      }
+    }, props.album.title)));
+  };
+
+  var _default = AlbumDetail;
+  exports.default = _default;
+},509,[1,165,510,511],"src/compoment/AlbumDetail.js");
+__d(function (global, _$$_REQUIRE, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
+
+  var _jsxFileName = "/Volumes/Roc01/RN/albums/src/compoment/Card.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var Card = function Card(props) {
+    return _react.default.createElement(_reactNative.View, {
+      style: styles.containerStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      }
+    }, props.children);
+  };
+
+  var styles = {
+    containerStyle: {
+      borderWidth: 1,
+      borderRadius: 2,
+      borderColor: '#E0E0E0',
+      shadowColor: '#000',
+      shdowOffset: {
+        width: 0,
+        height: 2
+      },
+      shdowOpacity: 0.2,
+      marginLeft: 8,
+      marginRight: 8,
+      elevation: 1
+    }
+  };
+  var _default = Card;
+  exports.default = _default;
+},510,[1,165],"src/compoment/Card.js");
+__d(function (global, _$$_REQUIRE, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
+
+  var _jsxFileName = "/Volumes/Roc01/RN/albums/src/compoment/CardSection.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var CardSection = function CardSection(props) {
+    return _react.default.createElement(_reactNative.View, {
+      style: styles.containerStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      }
+    }, props.children);
+  };
+
+  var styles = {
+    containerStyle: {
+      borderBottomWidth: 1,
+      backgroundColor: '#FFF',
+      padding: 8,
+      justifyContent: 'flex-start',
+      flexDirection: 'row',
+      postion: 'reletive',
+      borderColor: '#E0E0E0'
+    }
+  };
+  var _default = CardSection;
+  exports.default = _default;
+},511,[1,165],"src/compoment/CardSection.js");
 require(263);
 require(0);
 //# sourceMappingURL=index.map
