@@ -7,7 +7,7 @@ const AlbumDetail = (props) => {
     return (
         <Card>
             <CardSection style={styles.imageContainerStyle}> 
-                <Image resizeMode='cover' soure={{url:props.album.image}} style={styles.imageStyle}></Image>
+                <Image resizeMode='cover' source={{url:props.album.image}} style={styles.imageStyle}></Image>
             </CardSection>
             <CardSection>
                 <Text>{props.album.title}</Text>
