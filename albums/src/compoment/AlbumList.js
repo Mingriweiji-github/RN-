@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View,ScrollView, Text} from 'react-native';
 import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends React.Component {
@@ -21,10 +21,11 @@ class AlbumList extends React.Component {
     render() {
         console.log(this.state.albums.map((album => console.log(album))));
         return (
-            <View> 
-                {/* renderDetail()//错误演示-View中调用JS方法,{this.renderDetail()} */}
+            <ScrollView> 
+                {/* renderDetail()//错误演示-ScrollView中调用JS方法,{this.renderDetail()} */}
                 {this.renderDetail()}
-            </View>
+                <View style={{paddingBottom:8}}></View>
+            </ScrollView>
         )
     }
 
