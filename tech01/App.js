@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import Header from './src/component/common/Header';
 import reducers from './src/reducers';
-
+import TechList from './src/component/TechList'
 console.log("reducers", reducers)
 
 const store = createStore(reducers);
