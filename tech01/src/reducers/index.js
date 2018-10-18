@@ -1,11 +1,11 @@
 import {combineReducers} from 'redux';
 import TechReducer from './TechReducer'
-
+import SelectReducer from './SelectReducer';
 
 
 const reducers = combineReducers({
     techs: TechReducer,
-    selectdTechId:() => 3
+    selectdTechId:SelectReducer
 })
 
 export default reducers;

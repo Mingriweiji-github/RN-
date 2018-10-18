@@ -19,7 +19,7 @@ const store = createStore(reducers);
 const App = () => {
   return (
     <Provider store={store}>
-      <View>
+      <View style={{ flex : 1 }}>
         <Header headerText='Tech技术栈'></Header>
         <TechList />
       </View>
